@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/First-project/static/css/main.c561637b.chunk.css",
+    "main.js": "/First-project/static/js/main.df04e022.chunk.js",
+    "main.js.map": "/First-project/static/js/main.df04e022.chunk.js.map",
+    "runtime-main.js": "/First-project/static/js/runtime-main.fd1e361f.js",
+    "runtime-main.js.map": "/First-project/static/js/runtime-main.fd1e361f.js.map",
+    "static/js/2.171e0938.chunk.js": "/First-project/static/js/2.171e0938.chunk.js",
+    "static/js/2.171e0938.chunk.js.map": "/First-project/static/js/2.171e0938.chunk.js.map",
+    "static/js/3.aed5dd3c.chunk.js": "/First-project/static/js/3.aed5dd3c.chunk.js",
+    "static/js/3.aed5dd3c.chunk.js.map": "/First-project/static/js/3.aed5dd3c.chunk.js.map",
+    "index.html": "/First-project/index.html",
+    "static/css/main.c561637b.chunk.css.map": "/First-project/static/css/main.c561637b.chunk.css.map",
+    "static/js/2.171e0938.chunk.js.LICENSE.txt": "/First-project/static/js/2.171e0938.chunk.js.LICENSE.txt",
+    "static/media/JS-icon.dfef8d73.png": "/First-project/static/media/JS-icon.dfef8d73.png",
+    "static/media/React-icon.73ac128a.png": "/First-project/static/media/React-icon.73ac128a.png",
+    "static/media/css-icon.409b3a09.png": "/First-project/static/media/css-icon.409b3a09.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd1e361f.js",
+    "static/js/2.171e0938.chunk.js",
+    "static/css/main.c561637b.chunk.css",
+    "static/js/main.df04e022.chunk.js"
+  ]
+}
