@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  /*  background-image: url('images/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(114, 9, 121, 1) 49%,
+    rgba(2, 0, 36, 1) 100%
+  );
+
+  font-family: "Noto Sans KR", sans-serif;
+}

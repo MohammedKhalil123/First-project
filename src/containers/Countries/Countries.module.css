@@ -1,0 +1,440 @@
+.Countries {
+  background-color: rgb(192, 131, 181);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  width: 60%;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 4%;
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: 4%;
+}
+
+.GridContainer {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.CountryCard {
+  border-radius: 15px;
+  margin: 20px;
+  height: 100px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  background-color: palevioletred;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  font-weight: bold;
+  position: relative;
+  padding: 5px;
+  transition: font-size 300ms ease-in-out;
+
+  animation: load 0.2s cubic-bezier(0.75, -0.015, 0.565, 1.055) forwards;
+  animation-delay: calc(0.03s * var(--index));
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.CountryCard:hover {
+  font-size: 18px;
+}
+
+.CountryCard::after {
+  content: "";
+  position: absolute;
+
+  top: 0.5em;
+  left: 0.5em;
+  right: 0.5em;
+  bottom: 0.5em;
+  transform: scale(0, 1);
+  border-radius: 8px;
+  border-top: 2px solid rgba(255, 255, 255, 0.411);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.411);
+  transition: transform 500ms ease;
+  opacity: 1;
+}
+
+.CountryCard:hover::after {
+  transform: scale(1, 1);
+}
+
+.CountryCard::before {
+  content: "";
+  position: absolute;
+
+  top: 0.5em;
+  left: 0.5em;
+  right: 0.5em;
+  bottom: 0.5em;
+  transform: scale(1, 0);
+  border-right: 2px solid rgba(255, 255, 255, 0.411);
+  border-left: 2px solid rgba(255, 255, 255, 0.411);
+  border-radius: 8px;
+  transition: transform 500ms ease;
+  opacity: 1;
+}
+
+.CountryCard:hover::before {
+  transform: scale(1, 1);
+}
+
+.Searchbar {
+  width: 25%;
+  height: 30px;
+  font-size: 15px;
+  box-sizing: border-box;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  transition: width 0.3s ease-out;
+}
+
+.Searchbar:focus {
+  width: 27%;
+  border: 1px solid rgb(212, 10, 212);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.Search {
+  margin: 0px auto 10px auto;
+
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  animation: tran 0.7s ease-in forwards;
+}
+
+.RegionSelection {
+  width: 200px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  border: 1px solid black;
+  font-weight: bold;
+  outline: none;
+  font-size: 17px;
+  text-align-last: center;
+  background-color: rgb(250, 232, 247);
+}
+
+.RegionSelection:focus {
+  border: 1px solid rgb(212, 10, 212);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.Header {
+  font-size: 3em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid purple;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  animation: tran 0.3s ease-in forwards;
+}
+
+@keyframes tran {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.NoResultFound {
+  display: grid;
+  font-size: 1.5em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 200px;
+}
+
+.SubHeader {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid purple;
+  width: 35%;
+  font-size: 1em;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  animation: tran 0.5s ease-in forwards;
+}
+
+@media only screen and (max-width: 600px) {
+  .Countries {
+    margin-top: 12%;
+  }
+  .Header {
+    font-size: 2em;
+    width: 70%;
+  }
+
+  .Search {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+  }
+
+  .Searchbar {
+    width: 50%;
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .Searchbar:focus {
+    width: 60%;
+  }
+
+  .RegionSelection {
+    height: 40px;
+    width: 50%;
+  }
+
+  .GridContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+    padding-bottom: 20px;
+  }
+  .CountryCard {
+    font-size: 8px;
+    height: 80%;
+    width: 80%;
+    margin: 15px;
+  }
+  .Countries {
+    width: 90%;
+  }
+  .CountryCard:hover {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .Header {
+    font-size: 2em;
+    width: 60%;
+  }
+  .Countries {
+    margin-top: 12%;
+  }
+
+  .Search {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+  }
+
+  .Searchbar {
+    width: 50%;
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .Searchbar:focus {
+    width: 60%;
+  }
+
+  .RegionSelection {
+    height: 40px;
+    width: 50%;
+  }
+
+  .SubHeader {
+    width: 45%;
+  }
+
+  .GridContainer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+    padding-bottom: 20px;
+  }
+  .CountryCard {
+    font-size: 8px;
+    height: 80%;
+    width: 80%;
+    margin: 15px;
+  }
+  .Countries {
+    width: 90%;
+  }
+  .CountryCard:hover {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Header {
+    font-size: 2em;
+    width: 50%;
+  }
+
+  .Countries {
+    margin-top: 3%;
+  }
+
+  .Search {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+  }
+
+  .Searchbar {
+    width: 30%;
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .Searchbar:focus {
+    width: 40%;
+  }
+
+  .RegionSelection {
+    height: 40px;
+    width: 30%;
+  }
+
+  .GridContainer {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: none;
+    padding-bottom: 20px;
+  }
+  .CountryCard {
+    font-size: 11px;
+    height: 75px;
+    width: 80%;
+    margin: 15px;
+  }
+  .Countries {
+    width: 70%;
+  }
+  .CountryCard:hover {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .Header {
+    font-size: 3em;
+    width: 30%;
+  }
+
+  .Search {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .SubHeader {
+    width: 50%;
+  }
+
+  .Searchbar {
+    width: 25%;
+    font-size: 15px;
+    height: 30px;
+  }
+
+  .Searchbar:focus {
+    width: 30%;
+  }
+
+  .RegionSelection {
+    width: 200px;
+  }
+
+  .GridContainer {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: none;
+    padding-bottom: 20px;
+  }
+  .CountryCard {
+    font-size: 12px;
+    height: 90px;
+
+    margin-left: 20px;
+  }
+  .Countries {
+    width: 65%;
+  }
+  .CountryCard:hover {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .Header {
+    font-size: 3em;
+    width: 30%;
+  }
+
+  .Search {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .SubHeader {
+    width: 30%;
+  }
+
+  .Searchbar {
+    width: 25%;
+    font-size: 15px;
+    height: 30px;
+  }
+
+  .Searchbar:focus {
+    width: 27%;
+  }
+
+  .RegionSelection {
+    width: 200px;
+  }
+
+  .GridContainer {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: none;
+    padding-bottom: 20px;
+  }
+  .CountryCard {
+    font-size: 15px;
+    height: 100px;
+
+    margin: 20px;
+  }
+  .Countries {
+    width: 60%;
+  }
+  .CountryCard:hover {
+    font-size: 18px;
+  }
+}

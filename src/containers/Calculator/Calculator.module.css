@@ -1,0 +1,244 @@
+.Calculator {
+  width: 400px;
+  height: 400px;
+  box-shadow: 0px 0px 54px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  font-family: inherit;
+}
+
+.Score {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  background-color: rgba(29, 28, 28, 0.986);
+  color: white;
+  text-align: right;
+  height: 20%;
+  font-size: 40px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.Firstrow {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.Firstrowelements {
+  border: 1px solid grey;
+  background-color: rgb(207, 206, 206);
+  font-size: 25px;
+  font-weight: bold;
+  margin: auto;
+  padding: 10px;
+  width: 25%;
+  text-align: center;
+  outline: none;
+  height: 20%;
+}
+
+.Firstrowelements:active {
+  background-color: rgb(160, 157, 157);
+}
+
+.Secondrow {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 65%;
+}
+
+.Equal {
+  height: 100%;
+  width: 25%;
+  background-color: rgb(224, 95, 8);
+  border-radius: 0px 0px 15px 0px;
+  border: 1px solid gray;
+  font-size: 40px;
+
+  outline: none;
+}
+
+.Equal:active {
+  background-color: rgb(163, 71, 10);
+}
+
+.Otherbuttons {
+  display: grid;
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 75%;
+}
+
+.Otherbuttonelements {
+  font-weight: bold;
+  font-size: 25px;
+  border: 0.2px solid grey;
+  outline: none;
+}
+
+.Otherbuttonelements:active {
+  background-color: lightgrey;
+}
+
+.EdgeButton {
+  border-radius: 0px 0px 0px 15px;
+  border: 0.2px solid grey;
+  outline: none;
+}
+
+.Container {
+  width: 45%;
+  height: 500px;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(192, 131, 181);
+  justify-content: space-around;
+  border-radius: 8px;
+  align-items: center;
+  box-shadow: 0px 0px 54px 0px rgba(0, 0, 0, 0.75);
+}
+
+.History {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 400px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: rgb(23, 23, 104);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  overflow-y: auto;
+}
+.Historytitle {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  text-shadow: 0px 0px 8px white;
+}
+.linebreak {
+  width: 95%;
+  background-color: white;
+}
+
+.Historyitem {
+  text-align: center;
+  font-size: 17px;
+  color: white;
+  text-shadow: 0px 0px 8px white;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Container {
+    width: 90%;
+    margin-top: 12%;
+  }
+  .History {
+    width: 20%;
+  }
+  .Calculator {
+    width: 60%;
+  }
+  .Score {
+    font-size: 30px;
+  }
+  .History {
+    overflow-y: auto;
+  }
+  .Historyitem {
+    overflow-wrap: break-word;
+    font-size: 13px;
+    width: 80%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Container {
+    width: 85%;
+    margin-top: 10%;
+  }
+  .History {
+    width: 25%;
+  }
+  .Calculator {
+    width: 60%;
+  }
+  .Score {
+    font-size: 30px;
+  }
+  .Historyitem {
+    overflow-wrap: break-word;
+    font-size: 14px;
+    width: 80%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Container {
+    width: 80%;
+    margin-top: 4%;
+  }
+  .Score {
+    font-size: 37px;
+  }
+  .History {
+    width: 30%;
+  }
+  .Historyitem {
+    overflow-wrap: break-word;
+    font-size: 15px;
+    width: 80%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Container {
+    width: 60%;
+  }
+  .Score {
+    font-size: 37px;
+  }
+  .History {
+    width: 30%;
+  }
+  .Calculator {
+    width: 60%;
+  }
+  .Historyitem {
+    overflow-wrap: break-word;
+    font-size: 15px;
+    width: 80%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Container {
+    width: 55%;
+  }
+  .History {
+    width: 20%;
+  }
+  .Calculator {
+    width: 400px;
+  }
+  .Score {
+    font-size: 38px;
+  }
+  .History {
+    overflow-y: auto;
+    width: 30%;
+  }
+  .Historyitem {
+    overflow-wrap: break-word;
+    font-size: 15px;
+    width: 80%;
+  }
+}

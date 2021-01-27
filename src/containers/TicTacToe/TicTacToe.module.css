@@ -1,0 +1,326 @@
+.TicTacToe {
+  background-color: rgb(192, 131, 181);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  width: 60%;
+  height: 600px;
+  margin: auto;
+  margin-top: 4%;
+  border-radius: 15px 15px 15px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.GameForm,
+.Winner,
+.Turns {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 45%;
+  background-color: pink;
+  color: white;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.tictactoe {
+  margin: auto;
+  display: grid;
+  border-radius: 15px 15px 15px 15px;
+  grid-template-rows: repeat(3, 33.33%);
+  grid-template-columns: repeat(3, 1fr);
+  height: 80%;
+  width: 45%;
+  color: white;
+  background-color: black;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.Grid {
+  background-color: pink;
+  border: 2px solid purple;
+  color: black;
+}
+
+.tictactoe div:hover {
+  cursor: pointer;
+}
+
+.GameForm input {
+  width: 80%;
+  height: 30px;
+  font-size: 15px;
+  margin: 10px auto 20px auto;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  border: 1px solid black;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.GameForm input:focus {
+  border: 1px solid rgb(212, 10, 212);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.GameForm label {
+  color: purple;
+  font-size: 18px;
+  font-weight: bold;
+  width: 80%;
+  margin: 5px auto 0px auto;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+}
+
+.GameForm button {
+  width: 20%;
+  margin: 10px 50px 20px auto;
+  outline: none;
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 20px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.1s ease-in;
+}
+
+.GameForm button:active {
+  transform: scale(0.95);
+}
+
+h2 {
+  margin: 30px auto 50px auto;
+  color: purple;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.GameForm h1 {
+  margin: 0px auto 0px auto;
+  color: purple;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.circle {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 10px;
+  border-color: purple;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  margin: 20px auto;
+  cursor: none;
+  pointer-events: none;
+}
+
+.X {
+  display: inline-block;
+  margin: 20px 10px 20px 20px;
+  width: 70%;
+  height: 70%;
+  border: 7px solid pink;
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 43%,
+      purple 45%,
+      purple 55%,
+      rgba(0, 0, 0, 0) 57%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      135deg,
+      pink 0%,
+      pink 43%,
+      purple 45%,
+      purple 55%,
+      pink 57%,
+      pink 100%
+    );
+}
+
+.Validation {
+  color: purple;
+  margin: 0px 0px 0px 50px;
+}
+
+.Winner button {
+  display: inline-block;
+  width: 30%;
+  margin: 20px auto;
+  outline: none;
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 20px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.1s ease-in;
+}
+
+.Winner button:active {
+  transform: scale(0.95);
+}
+
+.Winner h1 {
+  margin: 30% auto 10px auto;
+
+  color: purple;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.Winner h1,
+.Turns h1 {
+  margin: 30% auto 10px auto;
+
+  color: purple;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .TicTacToe {
+    width: 90%;
+    flex-direction: column-reverse;
+    height: 900px;
+    justify-content: space-between;
+    margin-top: 11%;
+  }
+
+  .GameForm,
+  .Winner,
+  .Turns {
+    width: 90%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+
+  .tictactoe {
+    width: 90%;
+    margin-bottom: 3%;
+  }
+  .circle {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .TicTacToe {
+    width: 85%;
+    flex-direction: column-reverse;
+    height: 900px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10%;
+  }
+
+  .GameForm,
+  .Winner,
+  .Turns {
+    width: 90%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+
+  .Winner h1 {
+    margin-top: 20%;
+  }
+
+  .tictactoe {
+    width: 90%;
+    margin-bottom: 3%;
+    height: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .TicTacToe {
+    width: 70%;
+    flex-direction: column-reverse;
+    height: 900px;
+    justify-content: space-between;
+    margin-top: 3%;
+  }
+
+  .GameForm,
+  .Winner,
+  .Turns {
+    width: 90%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+
+  .Winner h1,
+  .Turns h1 {
+    margin-top: 25%;
+  }
+
+  .tictactoe {
+    width: 90%;
+    margin-bottom: 3%;
+    height: 90%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .TicTacToe {
+    width: 80%;
+    flex-direction: row;
+    height: 500px;
+    justify-content: space-between;
+  }
+
+  .GameForm,
+  .Winner,
+  .Turns {
+    width: 45%;
+    height: 90%;
+  }
+
+  .tictactoe {
+    width: 45%;
+
+    margin-top: 3%;
+    height: 90%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .TicTacToe {
+    width: 60%;
+    flex-direction: row;
+    height: 500px;
+    justify-content: space-between;
+  }
+
+  .GameForm,
+  .Winner,
+  .Turns {
+    width: 45%;
+    height: 87%;
+  }
+
+  .tictactoe {
+    width: 45%;
+
+    margin-top: 3%;
+    height: 87%;
+  }
+  .circle {
+    height: 90px;
+    width: 90px;
+  }
+}

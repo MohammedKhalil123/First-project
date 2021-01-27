@@ -1,0 +1,98 @@
+.Navigation {
+  display: flex;
+  flex-flow: row;
+  top: 0;
+  margin: auto;
+
+  background-color: purple;
+  width: 50%;
+  height: 50px;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 0px 0px 34px -6px rgba(0, 0, 0, 1);
+}
+
+.Navlinks {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.Nav {
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.Nav:hover {
+  border-bottom: 2px solid black;
+}
+
+a.active {
+  border-bottom: 2px solid black;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  background-color: white;
+  height: 2px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  .Navigation {
+    position: absolute;
+    right: 0;
+    width: 110px;
+    border-radius: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Navlinks {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 50px;
+    width: 110px;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    overflow-x: hidden;
+    background-color: purple;
+    transition: transform 0.1s ease-in;
+    border-radius: 0px 0px 0px 10px;
+    z-index: 1;
+  }
+
+  .burger {
+    display: block;
+    margin: auto;
+  }
+}
+
+.navactive {
+  transform: translateX(0%);
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
