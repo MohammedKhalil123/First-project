@@ -190,6 +190,14 @@ h2 {
   font-size: 40px;
 }
 
+.Turns hr,
+.Winner hr {
+  background-color: black;
+  height: 2px;
+  width: 300px;
+  margin: 0px auto;
+}
+
 @media only screen and (max-width: 600px) {
   .TicTacToe {
     width: 90%;
@@ -322,5 +330,74 @@ h2 {
   .circle {
     height: 90px;
     width: 90px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Turns h1 {
+    font-size: 6vw;
+    margin: auto;
+    margin-bottom: 0%;
+    margin-top: 50%;
+  }
+
+  .Winner button {
+    width: 50%;
+  }
+
+  .Turns h1,
+  .Winner h1 {
+    font-size: 6vw;
+    margin: auto;
+    margin-bottom: 0%;
+    margin-top: 45%;
+  }
+
+  .X {
+    width: 75%;
+    height: 70%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .Turns h1 {
+    font-size: 6vw;
+    margin: auto;
+    margin-bottom: 0%;
+    margin-top: 60%;
+  }
+
+  .Winner button {
+    width: 50%;
+  }
+
+  .Winner h1 {
+    font-size: 6vw;
+    margin: auto;
+    margin-bottom: 0%;
+    margin-top: 50%;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    margin-top: 40%;
+  }
+
+  .X {
+    height: 50%;
+    margin-top: 35%;
+  }
+
+  .GameForm button {
+    width: 25%;
+    margin-right: 25px;
+  }
+
+  .Turns hr,
+  .Winner hr {
+    width: 80%;
   }
 }

@@ -112,7 +112,6 @@ const Countries = props => {
     )
 
     const onSelectHandler = (event) => {
-        console.log('heey')
         setRegion(event.target.value)
     }
 

@@ -30,7 +30,6 @@ const TicTacToe = props => {
             iswinnerdecided.current = true;
             setWinner( win);
             setGameState('finished');
-            console.log('use effect')
             
         }
         if(table.fourth === table.fifth && table.fifth  === table.sixth && table.fourth !== ''){
@@ -95,7 +94,6 @@ const TicTacToe = props => {
             return
         }
         setGameState('invalid')
-        console.log(gameState);
     }
 
     const Draw = (event) => {
@@ -173,16 +171,15 @@ const TicTacToe = props => {
     if (gameState === 'started' ) {
         Form = <div className={classes.Turns}>
             <h1>It is {turn === player1Name ? player1Name : player2Name}'s turn</h1>
-            <hr style={{ backgroundColor: 'black', height: '2px', width: '300px', margin: '0px auto' }} />
+            <hr  />
         </div>
     }
 
     if (gameState === 'finished'|| iswinnerdecided.current) {
-        console.log('iswinnerdecided')
         
         Form = <div  className={classes.Winner}>
             <h1>Winner is {winner}</h1>
-            <hr style={{ backgroundColor: 'black', height: '2px', width: '300px', margin: '0px auto' }} />
+            <hr  />
             <button id='finish' onClick={() => Restart()}>Play Again</button></div>
     }
     return (

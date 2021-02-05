@@ -58,7 +58,6 @@ const Calculator = props => {
             return;
         }
         else{
-            console.log(number)
             setScore(Score + number)
         }
 

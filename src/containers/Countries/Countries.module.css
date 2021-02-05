@@ -438,3 +438,10 @@
     font-size: 18px;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .SubHeader {
+    width: 60%;
+    font-size: 0.9rem;
+  }
+}

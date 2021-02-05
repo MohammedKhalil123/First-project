@@ -13,4 +13,8 @@ body {
   );
 
   font-family: "Noto Sans KR", sans-serif;
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
 }
